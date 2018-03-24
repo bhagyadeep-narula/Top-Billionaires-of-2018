@@ -1,0 +1,31 @@
+{
+  "name": "top-billionaires-of-2018",
+  "version": "1.0.0",
+  "description": "A simple web app javascript, css and html to display the worlds richest billionaires of 2018",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhagyadeep-narula/Top-Billionaires-of-2018.git"
+  },
+  "keywords": [
+    "Javascript",
+    "html",
+    "css",
+    "Node.js",
+    "Jquery",
+    "Api"
+  ],
+  "author": "Bhagyadeep Narula",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhagyadeep-narula/Top-Billionaires-of-2018/issues"
+  },
+  "homepage": "https://github.com/bhagyadeep-narula/Top-Billionaires-of-2018#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
