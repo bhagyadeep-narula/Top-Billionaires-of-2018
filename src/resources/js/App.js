@@ -10,9 +10,10 @@ $.get(url, function(response, status){
 
 
 function beauty(data) {
+  const imageUrl = ( !data.squareImage || data.squareImage.includes("no-pic")) ? getImage(data): data.squareImage;
   return `<div class="col-sm-8 col-md-6 col-lg-4 bhagyas">
   <div class="card shadow">
-    <img class="card-img-top" src=${data.squareImage} alt="Card image cap">
+    <img class="card-img-top" src=${imageUrl} alt=${data.name}>
     <div class="card-body">
       <h5 class="card-title">${data.name}</h5>
       <h5 class="card-text">${(Math.floor(data.realTimeWorth)/ 1000).toFixed(2)} Billions </h5>
@@ -21,4 +22,9 @@ function beauty(data) {
   </div>
 </div>
 <br/>`;
+}
+
+function getImage(data) {
+  let imageUrl = (data.gender == 'M') ? '/img/man.png' : '/img/woman.png';
+  return imageUrl;
 }
