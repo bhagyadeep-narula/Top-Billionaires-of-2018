@@ -10,7 +10,8 @@ $.get(url, function(response, status){
 
 
 function beauty(data) {
-  const imageUrl = ( !data.squareImage || data.squareImage.includes("no-pic")) ? getImage(data): data.squareImage;
+  const check = ( !data.squareImage || data.squareImage.includes("no-pic"));
+  const imageUrl = check ? getImage(data): data.squareImage;
   return `<div class="col-sm-8 col-md-6 col-lg-4 bhagyas">
   <div class="card shadow">
     <img class="card-img-top" src=${imageUrl} alt=${data.name}>
